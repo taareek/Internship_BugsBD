@@ -31,7 +31,8 @@ h4{
     padding: 0.65rem 1.875rem;
     line-height: 1.7625rem;
     background-color: rgb(247, 164, 11);
-    border: 0.1875rem solid rgb(247, 164, 11);
+    border: 0.1675rem solid rgb(247, 164, 11);
+    border-radius: 0.185rem;
     color: white;
     font-size: 1.3375rem;
     font-weight: 450;
@@ -45,6 +46,27 @@ h4{
 .main-btn:hover{
     background-color: transparent;
     color: rgb(247, 164, 11);
+}
+
+.secondary-btn{
+    padding: 00.65rem 1.875rem;
+    line-height: 1.7625rem;
+    background-color: var(--seconday-color);
+    border: 0.1675rem solid rgb(247, 164, 11);
+    border-radius: 0.185rem;
+    color: rgb(247, 164, 11);
+    font-size: 1.3375rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition:all .4s ease-out 0s;
+}
+
+.secondary-btn:hover{
+    background-color: rgb(247, 164, 11);
+    color: white;
 }
 
 
@@ -110,4 +132,36 @@ Footer design
 .footer{
     background-color: var(--secondary-color);
     border-top: 1px solid;
+}
+
+/*
+=============================
+About Section
+=============================
+*/
+.about-section{
+    background: rgb(37, 37, 37);
+    padding: 8rem;
+}
+
+/*
+=============================
+Services Section
+=============================
+*/
+.services-section{
+    background: var(--secondary-color);
+    padding: 6rem;
+}
+.services-section .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.875rem;
+}
+
+.services-section .card img{
+    border-radius: 0.875rem;
+    object-fit: cover;
+    height: 300px;
+    width: 800px;
 }
