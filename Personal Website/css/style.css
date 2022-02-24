@@ -165,3 +165,23 @@ Services Section
     height: 300px;
     width: 800px;
 }
+
+/*
+===============================
+Portfolio Section
+===============================
+*/
+.portfolio-section{
+    background: rgb(37, 37, 37);
+    padding: 6rem;
+}
+.portfolio-section .ul .li .a:hover{
+    color:brown;
+}
+.try{
+    color: var(--text-color);
+}
+.try:hover{
+    color: rgb(247, 164, 11) !important;
+}
+
