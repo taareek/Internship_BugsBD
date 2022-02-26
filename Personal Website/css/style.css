@@ -185,3 +185,60 @@ Portfolio Section
     color: rgb(247, 164, 11) !important;
 }
 
+/*
+=====================================
+work experience section
+=====================================
+*/
+.work-experince-section{
+    background: var(--secondary-color);
+    padding: 4rem;
+}
+
+.work-experince-section .card{
+    display: inline-table;
+}
+
+.work-experince-section .card:hover {
+    background-color: rgb(247, 164, 11);
+}
+
+.hire-me-section{
+    background: rgb(37, 37, 37);
+    padding: 4.25rem;
+}
+/* white button*/
+
+.white-btn{
+    padding: 00.65rem 1.875rem;
+    line-height: 1.7625rem;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 0.185rem;
+    color: black;
+    font-size: 1.4375rem;
+    font-weight: 550;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition:all .4s ease-out 0s;
+}
+
+.white-btn:hover{
+    background-color: rgb(247, 164, 11);
+    color: white;
+}
+/*
+==================================
+Contact Section
+===================================
+*/
+.contact-section{
+    background: var(--secondary-color);
+    padding: 6rem;
+}
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
