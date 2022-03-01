@@ -2,4 +2,10 @@
 
 {% block content %}
 <h1>You are in Posts Page</h1>
+<h5>Getting data</h5>
+<br>
+{% for post in posts %}
+<h6>{{post.headline}}</h6>
+<p> {{post.sub_headline}} </p>
+{% endfor %}
 {% endblock content %}
