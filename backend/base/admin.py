@@ -1,19 +1,42 @@
 from django.contrib import admin
+from import_export.admin import ImportExportModelAdmin
 from django.contrib.auth.models import Group
 from .models import Contact, Person, Services, About
 
 # defining admin site header
 admin.site.site_header= "Admin Dashboard"
 
-# Registering models
-admin.site.register(Contact)
+# Registering our models (tables)
 
-admin.site.register(Person)
+#admin.site.register(Contact)
+@admin.register(Contact)
+class ContactData(ImportExportModelAdmin):
+    list_display = ("name", "email", "client_msg", "created")
+    pass
+admin.register(Contact)
 
-admin.site.register(About)
+#admin.site.register(Person)
+@admin.register(Person)
+class PersonData(ImportExportModelAdmin):
+    list_display = ("name", "age", "email")
+    pass
+admin.register(Person)
 
-admin.site.register(Services)
+#admin.site.register(About)
+@admin.register(About)
+class AboutData(ImportExportModelAdmin):
+    list_display = ("name", "designation", "description")
+    pass
+admin.register(About)
 
-# unregistering models
+#admin.site.register(Services)
+@admin.register(Services)
+class ServicesData(ImportExportModelAdmin):
+    list_display = ("service_name", "description", "image_file")
+    pass
+admin.register(Services)
+
+
+## unregistering models
 admin.site.unregister(Group)
 
