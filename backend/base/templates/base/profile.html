@@ -2,4 +2,14 @@
 
 {% block content %}
 <h1>You are in Profile Page</h1>
+<h2>Now you will see some person's data...</h2>
+<br>
+<h3> Name: {{person.0.name}} </h3> 
+<h4> Age: {{person.0.age}} </h4>
+<h4>Email: {{person.0.email}} </h4>
+<h2>Trying to fetch data from another view function</h2>
+{% for post in posts %}
+<h6>{{post.headline}}</h6>
+<p> {{post.sub_headline}} </p>
+{% endfor %}
 {% endblock content %}
