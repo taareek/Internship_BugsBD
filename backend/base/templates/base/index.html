@@ -413,24 +413,25 @@
               </div>
               </div>
               <div class="col-lg-7 ">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="" method="post" role="form" >
+                  {%csrf_token%}
                     <div class="row">
                       <div class="form-group" style="padding:1rem;">
                         <label for="name" style="color:gray;">NAME</label>
-                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="text" class="form-control" name="subject" id="subject" placeholder="Type Your Name" required>
+                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="text" class="form-control" name="name"   placeholder="Type Your Name" required>
                         </div>
                     <div class="form-group col-md-6" style="padding:1rem;">
                         <label for="name" style="color:gray;">PHONE NUMBER</label>
-                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="text" name="name" class="form-control" id="name" placeholder="Type your phone number" required>
+                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="text" name="phone_number" class="form-control"   placeholder="Type your phone number" required>
                     </div>
                     <div class="form-group col-md-6" style="padding:1rem;">
                         <label for="name" style="color:gray;">EMAIL</label>
-                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="email" class="form-control" name="email" id="email" placeholder="Type your email address" required>
+                        <input style="background-color:rgba(70, 69, 66, 0.671); border:none;" type="email" class="form-control" name="email"  placeholder="Type your email address" required>
                     </div>
                     </div>
                     <div class="form-group" >
                     <label for="name" style="color:gray;">YOUR MESSAGE</label>
-                    <textarea style="background-color:rgba(70, 69, 66, 0.671); border:none;" class="form-control" name="message" rows="10" placeholder="Type your message here" required></textarea>
+                    <textarea style="background-color:rgba(70, 69, 66, 0.671); border:none;" class="form-control" name="client_msg" rows="10" placeholder="Type your message here" required></textarea>
                     </div>
                     <br>
                     <div>

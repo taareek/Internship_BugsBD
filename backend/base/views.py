@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Person, About, Services, WorkExperience
-
+from .models import Person, About, Services, WorkExperience, Contact
+import datetime
 # Create your views here.
 
 def home(request):
@@ -17,8 +17,31 @@ def home(request):
         'service': services_data, 
         'experience': work_experience_data
     }
+    # getting data from contact form and insert into database
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        number = request.POST.get('phone_number')
+        email = request.POST.get('email')
+        client_msg = request.POST.get('client_msg')
+        created = datetime.datetime.now()
+
+        contact_info = Contact(name= name, phone_number= number, email= email, client_msg= client_msg, created= created)
+        contact_info.save()
 
     return render(request, 'base/index.html', context)
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        number = request.POST.get('phone_number')
+        email = request.POST.get('email')
+        client_msg = request.POST.get('client_msg')
+        created = datetime.datetime.now()
+
+        contact_info = Contact(name= name, phone_number= number, email= email, client_msg= client_msg, created= created)
+        contact_info.save()
+    print('Your information submitted.')
+    return render(request, 'base/contact.html')
 
 def posts(request):
     posts = [

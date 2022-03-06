@@ -8,7 +8,7 @@ class Contact(models.Model):
     name= models.CharField(max_length= 100)
     phone_number= models.CharField(max_length= 20)
     email = models.EmailField(max_length= 50)
-    client_msg = models.TextField()
+    client_msg = models.TextField(null= True, blank= True)
     created = models.DateField(auto_now_add= True)
 
     def __str__(self):
