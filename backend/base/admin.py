@@ -1,7 +1,7 @@
 from django.contrib import admin
 from import_export.admin import ImportExportModelAdmin
 from django.contrib.auth.models import Group
-from .models import Contact, Person, Services, About
+from .models import Contact, Person, Services, About, WorkExperience
 
 # defining admin site header
 admin.site.site_header= "Admin Dashboard"
@@ -36,6 +36,11 @@ class ServicesData(ImportExportModelAdmin):
     pass
 admin.register(Services)
 
+@admin.register(WorkExperience)
+class ExperienceData(ImportExportModelAdmin):
+    list_display = ("timeline", "position", "organization_name", "description")
+    pass
+admin.register(WorkExperience)
 
 ## unregistering models
 admin.site.unregister(Group)

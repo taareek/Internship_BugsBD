@@ -42,4 +42,12 @@ class Services(models.Model):
     def __str__(self):
         return self.service_name
 
+class WorkExperience(models.Model):
+    timeline = models.CharField(max_length= 20)
+    position = models.CharField(max_length= 50)
+    organization_name = models.CharField(max_length= 100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.position
 

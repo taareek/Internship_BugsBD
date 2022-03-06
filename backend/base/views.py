@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Person, About, Services
+from .models import Person, About, Services, WorkExperience
 
 # Create your views here.
 
@@ -10,9 +10,12 @@ def home(request):
 
     about_data = About.objects.all()
     services_data = Services.objects.all()
+    work_experience_data = WorkExperience.objects.all()
 
     context = {
-        'about': about_data, 'service': services_data
+        'about': about_data, 
+        'service': services_data, 
+        'experience': work_experience_data
     }
 
     return render(request, 'base/index.html', context)
@@ -32,7 +35,8 @@ def posts(request):
             'sub_headline': 'One of the trending',
         },
     ]
-    context = {'posts' : posts}
+    work_experience_data = WorkExperience.objects.all()
+    context = {'posts' : posts, 'experience':work_experience_data}
     #return HttpResponse('<h1>Posts</h1>')
     return render(request, 'base/posts.html', context)
 

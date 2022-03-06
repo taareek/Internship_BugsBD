@@ -8,4 +8,9 @@
 <h6>{{post.headline}}</h6>
 <p> {{post.sub_headline}} </p>
 {% endfor %}
+<br><br><br>
+{% for a in experience%}
+<h6>{{a.timeline}}</h6>
+{% endfor %}
+<h1>{{experience.0.position}} </h1>
 {% endblock content %}
