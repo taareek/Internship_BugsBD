@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Person, About, Services, WorkExperience, Contact
+from .models import Person, About, Services, WorkExperience, Contact, AudioBox
 import datetime
 # Create your views here.
 
@@ -11,11 +11,13 @@ def home(request):
     about_data = About.objects.all()
     services_data = Services.objects.all()
     work_experience_data = WorkExperience.objects.all()
+    audio_data = AudioBox.objects.all()
 
     context = {
         'about': about_data, 
         'service': services_data, 
-        'experience': work_experience_data
+        'experience': work_experience_data,
+        'audio': audio_data
     }
     # getting data from contact form and insert into database
     if request.method == 'POST':
