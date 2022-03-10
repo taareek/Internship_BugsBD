@@ -20,7 +20,7 @@
     <!--Header Design Start-->
     <header>
         <nav class="navbar navbar-expand-lg navigation-wrap">
-            <div class="container">
+            <div class="container" style="padding-bottom: 0;">
               <a class="navbar-brand" href="{% url 'home' %}"><img src= "{% static 'images/logo.jpg' %}" height="80"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,6 +46,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
                   </li>
+                  <li class="nav-item">
+                    <img src="{% static 'audio/pause.png' %}" alt="icon" id="icon" style="height: 35px; width: 35px; padding-top: 0.5rem; " >
+                    <audio src="{{audio.0.file.url}}" id="mySong"  autoplay="autoplay"></audio>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -67,13 +71,19 @@
                     </div>
                     <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
                         <div>
-                            <img src="{% static 'images/tarek_2.png' %} " class= "image-fluid" alt="picture" style="width:500px;height:500px;">
+                            <img src="{% static 'images/tarek_2.png' %} " class= "image-fluid" alt="picture" style="width:500px;height:500px;">                
+                        </div>
+                        <div>
+                          
                         </div>  
                     </div>
                 </div>
-                <div class="row">
-                  <audio src="{{audio.0.file.url}}" id="my-audio"  autoplay="autoplay"></audio>
-                </div>
+            </div>
+            <div class="container" style="padding-top: 3.75rem; padding-bottom:none;">
+              <div class="d-flex justify-content-center">
+                <!--Ekhane audio chilo -->
+                
+              </div>
             </div>
         </div>
     </section>

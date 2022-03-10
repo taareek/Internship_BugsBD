@@ -283,3 +283,12 @@ Contact Section
   .social-links a:hover i{
     color:#fff;
   }
+
+  /*
+  Audio Icon
+  */
+  #icon{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}

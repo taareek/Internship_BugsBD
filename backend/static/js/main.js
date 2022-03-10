@@ -16,3 +16,17 @@ navBar.forEach(function(a){
         navCollaps.classList.remove("show");
     })
 })
+
+//audio play and pause
+var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function (){
+        if(mySong.paused){
+            mySong.play();
+            icon.src= "static/audio/pause.png";
+        }else{
+            mySong.pause();
+            icon.src= "static/audio/play.png"
+        }
+    }
