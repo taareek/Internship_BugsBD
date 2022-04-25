@@ -1,0 +1,285 @@
+
+a,
+a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--text-color) !important;
+}
+
+
+/*======variable define========*/
+:root{
+    --primary-color: rgb(19, 18, 18);
+    --secondary-color: rgb(44, 44, 42);
+    --text-gray: rgba(202, 204, 214, 0.849);
+    --text-color: rgb(238, 228, 228);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-color);
+}
+h4{
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.main-btn{
+    display: inline-block;
+    padding: 0.65rem 1.875rem;
+    line-height: 1.7625rem;
+    background-color: rgb(247, 164, 11);
+    border: 0.1675rem solid rgb(247, 164, 11);
+    border-radius: 0.185rem;
+    color: white;
+    font-size: 1.3375rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition:all .4s ease-out 0s;
+}
+
+.main-btn:hover{
+    background-color: transparent;
+    color: rgb(247, 164, 11);
+}
+
+.secondary-btn{
+    padding: 00.65rem 1.875rem;
+    line-height: 1.7625rem;
+    background-color: var(--seconday-color);
+    border: 0.1675rem solid rgb(247, 164, 11);
+    border-radius: 0.185rem;
+    color: rgb(247, 164, 11);
+    font-size: 1.3375rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition:all .4s ease-out 0s;
+}
+
+.secondary-btn:hover{
+    background-color: rgb(247, 164, 11);
+    color: white;
+}
+
+
+
+/*
+====Header design========
+*/
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left:0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:var(--text-color);
+    letter-spacing: 1px;
+}
+
+/* Changing nvbar behavior on scroll */
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background: var(--primary-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
+    transition: all .15s ease-in-out 0s;
+}
+
+
+/*
+===================================
+top banner design
+===================================
+*/
+.top-banner{
+    width: 100%;
+    background: var(--secondary-color);
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem;
+}
+
+/*
+=============================
+Footer design
+=============================
+*/
+.footer{
+    background-color: var(--secondary-color);
+    border-top: 1px solid;
+}
+
+/*
+=============================
+About Section
+=============================
+*/
+.about-section{
+    background: rgb(37, 37, 37);
+    padding: 8rem;
+}
+
+/*
+=============================
+Services Section
+=============================
+*/
+.services-section{
+    background: var(--secondary-color);
+    padding: 6rem;
+}
+.services-section .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.875rem;
+}
+
+.services-section .card img{
+    border-radius: 0.875rem;
+    object-fit: cover;
+    height: 300px;
+    width: 800px;
+}
+
+/*
+===============================
+Portfolio Section
+===============================
+*/
+.portfolio-section{
+    background: rgb(37, 37, 37);
+    padding: 6rem;
+}
+.portfolio-section .ul .li .a:hover{
+    color:brown;
+}
+.try{
+    color: var(--text-color);
+}
+.try:hover{
+    color: rgb(247, 164, 11) !important;
+}
+
+/*
+=====================================
+work experience section
+=====================================
+*/
+.work-experince-section{
+    background: var(--secondary-color);
+    padding: 4rem;
+}
+
+.work-experince-section .card{
+    display: inline-table;
+}
+
+.work-experince-section .card:hover {
+    background-color: rgb(247, 164, 11);
+}
+
+.hire-me-section{
+    background: rgb(37, 37, 37);
+    padding: 4.25rem;
+}
+/* white button*/
+
+.white-btn{
+    padding: 00.65rem 1.875rem;
+    line-height: 1.7625rem;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 0.185rem;
+    color: black;
+    font-size: 1.4375rem;
+    font-weight: 550;
+    text-transform: capitalize;
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition:all .4s ease-out 0s;
+}
+
+.white-btn:hover{
+    background-color: rgb(247, 164, 11);
+    color: white;
+}
+/*
+==================================
+Contact Section
+===================================
+*/
+.contact-section{
+    background: var(--secondary-color);
+    padding: 6rem;
+}
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.contact-section .a:hover{
+    background-color: rgb(247, 164, 11);
+}
+
+.icon-background {
+    color: #c0ffc0;
+}
+
+.social-links a{
+    text-align:center;
+      float: left;
+      width: 46px;
+      height: 46px;
+      border: none;
+      border-radius: 100%;
+      background: rgba(0,0,0,0.2);
+      margin-right: 7px; /*space between*/
+      display: flex;
+      align-items: flex-start;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+  } 
+  .social-links a i{
+      font-size: 20px;
+      align-self:center;
+      color: #909090;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      margin: 0 auto;
+  }
+  .social-links a i::before{
+    display:inline-block;
+    text-decoration:none;
+  }
+  .social-links a:hover{
+    background: rgb(247, 164, 11);
+  }
+  .social-links a:hover i{
+    color:#fff;
+  }
